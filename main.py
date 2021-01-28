@@ -1,24 +1,12 @@
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+import time
 
 PATH = 'chromedriver.exe'
 driver = webdriver.Chrome(PATH)
 driver.get("https://gogoanime.so")
+driver.implicitly_wait(10)
 PARENT_TAB = driver.current_window_handle
-
-def homepage(self):
-    self.locator = "keyword"
-
-def searchresults(self):
-    self.locator = "One Piece"
-
-def animepage(self):
-    self.locator = "//ul[@id='episode_related']/li/a/div[@class='name']"
-
-def downloadPage1(self):
-    self.locator = "//ul/li[@class='downloads']/a"
-
-def downloadPage2(self):
-    self.locator = "Download(360P - mp4)"
 
 driver.quit()
