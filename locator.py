@@ -15,8 +15,8 @@ class animepage():
 
 class downloadPage():
 
-    DOWNLOAD = (By.XPATH, "//ul/li[@class='downloads']/a")
+    DOWNLOAD = (By.XPATH, "//ul/li[@class='dowloads']/a")
 
 class confirmDownload():
 
-    quality = (By.LINK_TEXT, "Download(360P - mp4)")
+    quality = (By.XPATH, ".//div[@class='mirror_link']/div[1]")
